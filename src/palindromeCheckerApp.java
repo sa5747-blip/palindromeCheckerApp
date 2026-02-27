@@ -1,9 +1,22 @@
-public class palindromeCheckerApp{
+public class palindromeCheckerApp {
+
     public static void main(String[] args) {
+
         System.out.println("===================================");
         System.out.println("   WELCOME TO PALINDROME APP");
         System.out.println("===================================");
-        System.out.println("This application checks whether a word is palindrome or not.");
 
+        String word = "madam";
+        String reversed = "";
+
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed = reversed + word.charAt(i);
+        }
+
+        if (word.equals(reversed)) {
+            System.out.println(word + " is a Palindrome");
+        } else {
+            System.out.println(word + " is not a Palindrome");
+        }
     }
 }
